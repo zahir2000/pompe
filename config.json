@@ -1,0 +1,135 @@
+{
+    "dataframes": [
+      {
+        "name": "demographic",
+        "source": {
+          "path": "input/",
+          "format": "pkl",
+          "compression": {
+            "method": "gzip",
+            "enabled": false
+          }
+        },
+        "destination": {
+          "path": "output/",
+          "format": "pkl",
+          "compression": {
+            "method": "gzip",
+            "enabled": true
+          }
+        },
+        "parameters": {
+          "date_format": "%d/%b/%Y",
+          "dtype_conversion": {
+            "GENDER": "float32",
+            "POMPE": "int8",
+            "AGE": "float32"
+          },
+          "age_date": {
+            "date": "2023-04-24",
+            "format": "%Y-%m-%d"
+          }
+         }
+      },
+      {
+        "name": "clinical",
+        "source": {
+          "path": "input/",
+          "format": "pkl",
+          "compression": {
+            "method": "gzip",
+            "enabled": false
+          }
+        },
+        "destination": {
+          "path": "output/",
+          "format": "pkl",
+          "compression": {
+            "method": "gzip",
+            "enabled": true
+          }
+        },
+        "parameters": {
+          "date_format": "%d/%b/%Y %H:%M:%S",
+          "dtype_conversion": {
+            "POMPE": "int8",
+            "EVENTRESULT": "str"
+          }
+         }
+      },
+      {
+        "name": "diagnosis",
+        "source": {
+          "path": "input/",
+          "format": "pkl",
+          "compression": {
+            "method": "gzip",
+            "enabled": false
+          }
+        },
+        "destination": {
+          "path": "output/",
+          "format": "pkl",
+          "compression": {
+            "method": "gzip",
+            "enabled": true
+          }
+        },
+        "parameters": {
+          "dtype_conversion": {
+            "PERSONID": "int32",
+            "ENCNTRID": "int32",
+            "ICDCODE": "str",
+            "ICDDESCRIPTION": "str"
+          }
+         }
+      },
+      {
+        "name": "drugs",
+        "source": {
+          "path": "input/",
+          "format": "pkl",
+          "compression": {
+            "method": "gzip",
+            "enabled": false
+          }
+        },
+        "destination": {
+          "path": "output/",
+          "format": "pkl",
+          "compression": {
+            "method": "gzip",
+            "enabled": true
+          }
+        },
+        "parameters": {
+          "date_format": "%d/%b/%Y %H:%M:%S"
+         }
+      },
+      {
+        "name": "labs",
+        "source": {
+          "path": "input/",
+          "format": "pkl",
+          "compression": {
+            "method": "gzip",
+            "enabled": false
+          }
+        },
+        "destination": {
+          "path": "output/",
+          "format": "pkl",
+          "compression": {
+            "method": "gzip",
+            "enabled": true
+          }
+        },
+        "parameters": {
+          "date_format": "%d/%b/%Y %H:%M:%S",
+          "dtype_conversion": {
+            "ORDERCATALOG": "str"
+          }
+         }
+      }
+    ]
+  }

@@ -1,0 +1,5 @@
+input/*
+logs/*
+output/*
+preprocess/__pycache__/
+__pycache__/
